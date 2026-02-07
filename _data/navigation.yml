@@ -1,9 +1,12 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
   - title: "About"
     url: /about/
+
+  - title: "Projects"
+    url: /portfolio/
+
+  - title: "Research"
+    url: /research/
+
+  - title: "CV"
+    url: /assets/Resume_Lomash_Relia.pdf
