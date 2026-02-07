@@ -14,7 +14,7 @@ description: >-
 github_username: "lomash-relia"
 
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "sunrise"
 
 search: true
 
