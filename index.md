@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## Robotics & Autonomous Systems R&D Engineer  
-**Perception • Control • Edge AI • Simulation-to-Real**
+**Robotics Perception & Control | Edge AI | Deep Learning | Physical AI | GATE DA ’25 Qualified | KEA PGCET ’25 Rank 52 | IEEE MTTS SB Secretary**
 
 I am an M.Tech student in **Autonomous Systems and Machine Intelligence** at  
 **ABV–Indian Institute of Information Technology and Management (ABV-IIITM), Gwalior**.
