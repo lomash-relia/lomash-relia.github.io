@@ -12,7 +12,7 @@ I am an M.Tech student in **Autonomous Systems and Machine Intelligence** at
 **ABV–Indian Institute of Information Technology and Management (ABV-IIITM), Gwalior**.
 
 I build **end-to-end autonomous robotic systems** by tightly integrating  
-**computer vision, control theory, and embedded AI** — from **simulation to real-world deployment**, with a strong focus on **space and planetary robotics**.
+**computer vision, control theory, and embedded AI** — from **simulation to real-world deployment**, with a focus on **space and planetary robotics**.
 
 ---
 
@@ -67,3 +67,11 @@ I build **end-to-end autonomous robotic systems** by tightly integrating
 ---
 
 *I am actively seeking **Robotics R&D / Research Engineer roles** where I can work on perception-driven control, embodied AI, and real-world autonomous systems.*
+
+---
+
+### 😄 Just for Fun
+
+![Robot thinking GIF](https://media.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.gif)
+
+*Because even robots need debugging breaks.*
