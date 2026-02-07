@@ -1,34 +1,38 @@
 # ----------------------------------------
-# Site settings
+# Site Settings
 # ----------------------------------------
 
 title: "Lomash Relia"
 email: "lomashrelia@gmail.com"
+
 description: >-
-  Portfolio of Lomash Relia, a graduate researcher in Autonomous Systems and Robotics.
-  This website presents research work, projects, professional experience, and publications.
+  Portfolio of Lomash Relia, M.Tech student in Autonomous Systems and Machine Intelligence.
+  Focused on robotics research, autonomous systems, computer vision, deep learning,
+  and edge AI. This site presents research work, technical projects, publications,
+  and professional experience.
 
 github_username: "lomash-relia"
 
-# Minimal Mistakes theme
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 
-# Search
 search: true
 
-# Build settings
+# ----------------------------------------
+# Build Settings
+# ----------------------------------------
+
 markdown: kramdown
 permalink: /:categories/:title/
 timezone: "Asia/Kolkata"
 
-# Include custom collections
 include:
   - _pages
   - _projects
+  - _portfolio
 
 # ----------------------------------------
-# Plugins
+# Plugins (GitHub Pages compatible)
 # ----------------------------------------
 
 plugins:
@@ -39,13 +43,16 @@ plugins:
   - jekyll-include-cache
 
 # ----------------------------------------
-# Author details
+# Author Information
 # ----------------------------------------
 
 author:
   name: "Lomash Relia"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Graduate student and robotics researcher specializing in autonomous systems, perception, and control."
+  bio: >-
+    M.Tech student and robotics researcher specializing in autonomous systems,
+    space robotics, computer vision, deep learning, and edge AI.
+
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
@@ -63,8 +70,12 @@ author:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=jX94zWoAAAAJ&hl=en"
 
+    - label: "Supervisor"
+      icon: "fas fa-fw fa-university"
+      url: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh"
+
 # ----------------------------------------
-# Footer links
+# Footer Links
 # ----------------------------------------
 
 footer:
@@ -81,20 +92,15 @@ footer:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=jX94zWoAAAAJ&hl=en"
 
-    - label: "Springer Publication"
-      icon: "fas fa-fw fa-book"
-      url: "https://link.springer.com/chapter/10.1007/978-981-96-3420-0_17"
-
-    - label: "WGNE Blue Book"
-      icon: "fas fa-fw fa-file-alt"
-      url: "https://wgne.net/bluebook/uploads/2024/docs/010_Relia,_Lomash_Evaluating_Deep_Learning_Models_for_Cyclone_Intensity_Estimation.pdf"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:lomashrelia@gmail.com"
 
 # ----------------------------------------
-# Page defaults
+# Page Defaults
 # ----------------------------------------
 
 defaults:
-  # Posts (if used later)
   - scope:
       path: ""
       type: posts
@@ -105,7 +111,6 @@ defaults:
       share: true
       related: true
 
-  # Pages
   - scope:
       path: "_pages"
       type: pages
@@ -114,7 +119,7 @@ defaults:
       author_profile: true
 
 # ----------------------------------------
-# Archive configuration
+# Archive Settings
 # ----------------------------------------
 
 category_archive:
