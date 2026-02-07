@@ -1,94 +1,100 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+# ----------------------------------------
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+# ----------------------------------------
+
+title: "Lomash Relia"
+email: "lomashrelia@gmail.com"
+description: >-
+  Portfolio of Lomash Relia, a graduate researcher in Autonomous Systems and Robotics.
+  This website presents research work, projects, professional experience, and publications.
+
+github_username: "lomash-relia"
+
+# Minimal Mistakes theme
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+
+# Search
 search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "Asia/Kolkata"
 
+# Include custom collections
 include:
   - _pages
+  - _projects
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# ----------------------------------------
+# Plugins
+# ----------------------------------------
 
-# Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
+  - jekyll-gist
   - jemoji
   - jekyll-include-cache
 
+# ----------------------------------------
+# Author details
+# ----------------------------------------
+
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name: "Lomash Relia"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Graduate student and robotics researcher specializing in autonomous systems, perception, and control."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:lomashrelia@gmail.com"
+
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/lomash-relia/"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/lomash-relia"
+
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=jX94zWoAAAAJ&hl=en"
+
+# ----------------------------------------
+# Footer links
+# ----------------------------------------
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/lomash-relia/"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/lomash-relia"
+
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=jX94zWoAAAAJ&hl=en"
+
+    - label: "Springer Publication"
+      icon: "fas fa-fw fa-book"
+      url: "https://link.springer.com/chapter/10.1007/978-981-96-3420-0_17"
+
+    - label: "WGNE Blue Book"
+      icon: "fas fa-fw fa-file-alt"
+      url: "https://wgne.net/bluebook/uploads/2024/docs/010_Relia,_Lomash_Evaluating_Deep_Learning_Models_for_Cyclone_Intensity_Estimation.pdf"
+
+# ----------------------------------------
+# Page defaults
+# ----------------------------------------
 
 defaults:
-  # _posts
+  # Posts (if used later)
   - scope:
       path: ""
       type: posts
@@ -96,10 +102,10 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
       share: true
       related: true
-  # _pages
+
+  # Pages
   - scope:
       path: "_pages"
       type: pages
@@ -107,9 +113,14 @@ defaults:
       layout: single
       author_profile: true
 
+# ----------------------------------------
+# Archive configuration
+# ----------------------------------------
+
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
