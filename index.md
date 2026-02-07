@@ -72,6 +72,6 @@ I build **end-to-end autonomous robotic systems** by tightly integrating
 
 ### 😄 Just for Fun
 
-![Robot thinking GIF](https://media.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.gif)
+![coffee break](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTl5NG02Z3BjaGszdHdlbDN1Z3lqeWJsNXJmbWZzcXptcmYydzIxMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cvmugq5cuJ4nC/giphy.gif  )
 
 *Because even robots need debugging breaks.*
