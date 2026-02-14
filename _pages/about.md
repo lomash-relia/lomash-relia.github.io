@@ -6,7 +6,7 @@ permalink: /about/
 
 ## How I Build Autonomous Systems
 
-I approach robotics as a systems engineering problem — not just a machine learning problem.
+I approach robotics as a systems engineering problem - not just a machine learning problem.
 
 For a robotic system to operate reliably, perception, control, computation, and hardware constraints must be designed together. I focus on building pipelines that remain stable and predictable when exposed to real-world latency, power limits, and sensor uncertainty.
 
