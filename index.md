@@ -5,51 +5,57 @@ permalink: /
 author_profile: true
 ---
 
-## Perception-Driven Control Engineer  
-**Autonomous Systems | Robotics | Edge AI | Physical AI**
+## Robotics Systems Engineer  
+**Perception → Control → Deployment**
 
-I design and deploy **perception-driven robotic systems**, integrating  
-**computer vision, control theory, and embedded computation** —  
-from simulation to hardware-constrained real-world execution.
+I build and deploy **perception-driven robotic systems** that operate outside the simulator.
 
-Currently pursuing M.Tech in **Autonomous Systems and Machine Intelligence**  
-at ABV–IIITM Gwalior.
+My work integrates **vision, control theory, embedded computation, and hardware-level system design** - moving from mathematical modeling to real-world execution under power, latency, and reliability constraints.
 
----
-
-## Core Focus
-
-- **Vision-Based Control** (Image-Based Visual Servoing, perception-to-actuation pipelines)
-- **Robotic Systems Integration** (hardware fabrication, actuator integration, power architecture)
-- **Edge AI Deployment** (model optimization, real-time inference on embedded platforms)
-- **Simulation-to-Real Transfer** for autonomous robotic systems
+Currently pursuing M.Tech in **Autonomous Systems and Machine Intelligence** at ABV–IIITM Gwalior.
 
 ---
 
-## What Differentiates My Work
+## Engineering Focus
 
-- I build **complete robotic systems**, not isolated models  
-- I validate algorithms in both **simulation and physical hardware**  
-- I work at the intersection of **control, perception, and deployment constraints**  
-- I focus on systems that must operate reliably in **resource-limited environments**
+- **Vision-Based Closed-Loop Control**  
+  Image-Based Visual Servoing (IBVS), perception-to-actuation pipelines, stability-aware control
 
----
+- **Robotic Hardware Integration**  
+  3D-printed fabrication, serial bus servos, power architecture design, calibration
 
-## Selected Experience
+- **Edge AI Deployment**  
+  Model optimization, quantization, real-time inference on embedded platforms
 
-- Research Intern — Space Applications Centre (ISRO)  
-- Springer & IEEE published research  
-- Hardware-level robotic arm fabrication and control integration  
-- Edge AI rover deployment on Raspberry Pi  
+- **Simulation-to-Real Validation**  
+  System-level testing across MuJoCo simulation and physical robotic platforms
 
 ---
 
-## Explore
+## How I Work
 
-→ **[Projects](/projects/)** — Hardware, control pipelines, system validation  
-→ **[Research](/research/)** — Publications and ongoing thesis work  
+- I design full robotic stacks - not isolated ML models  
+- I validate control pipelines on physical hardware  
+- I optimize systems under real compute and power constraints  
+- I focus on reliability, stability, and deployability  
+
+---
+
+## Experience Snapshot
+
+- Research Intern - Space Applications Centre (ISRO)  
+- Springer & IEEE-published research  
+- Dual-arm robotic fabrication and actuator-level integration  
+- Edge AI rover system deployed on Raspberry Pi  
+
+---
+
+## Explore My Work
+
+→ **[Projects](/projects/)** - Control pipelines, hardware systems, deployment validation  
+→ **[Research](/research/)** - Publications and thesis work  
 → **[Download CV](/assets/Resume_Lomash_Relia.pdf)**  
 
 ---
 
-*Actively seeking Robotics R&D / Autonomous Systems Engineer roles in physical AI, space robotics, and perception-driven control systems.*
+*Seeking Robotics R&D / Autonomous Systems Engineer roles in physical AI, space robotics, and perception-driven control systems.*
