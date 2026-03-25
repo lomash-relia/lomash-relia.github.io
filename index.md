@@ -59,8 +59,8 @@ Currently pursuing M.Tech in **Autonomous Systems and Machine Intelligence** at 
 ---
 <div style="text-align: center; margin: 20px 0;">
   <iframe 
-    width="360" 
-    height="640"
+    width="270"
+    height="480"
     src="https://www.youtube.com/embed/1M4zjW5yJ08"
     title="Project Demo"
     frameborder="0"
