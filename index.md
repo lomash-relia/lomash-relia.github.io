@@ -57,5 +57,13 @@ Currently pursuing M.Tech in **Autonomous Systems and Machine Intelligence** at 
 → **[Download CV](/assets/Resume_Lomash_Relia.pdf)**  
 
 ---
+<div style="position: relative; padding-bottom: 177%; height: 0; overflow: hidden; max-width: 400px; margin: auto;">
+  <iframe 
+    src="https://www.youtube.com/embed/1M4zjW5yJ08"
+    style="position: absolute; top:0; left:0; width:100%; height:100%;"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
 
 *Seeking Robotics R&D / Autonomous Systems Engineer roles in physical AI, space robotics, and perception-driven control systems.*
