@@ -161,9 +161,12 @@ a:hover {
 /* =========================================================
    05. SITE TITLE
    ========================================================= */
+/* =========================================================
+   SITE TITLE
+   ========================================================= */
 
 .site-title {
-  color: var(--retro-navy) !important;
+  color: var(--retro-ink) !important;
 
   font-family:
     "IBM Plex Mono",
@@ -177,6 +180,15 @@ a:hover {
   letter-spacing: -0.03em;
 
   text-decoration: none !important;
+
+  padding: 0.3rem 0.45rem;
+
+  border: 1px solid transparent;
+
+  transition:
+    background 0.1s ease,
+    color 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
 .site-title::before {
@@ -185,6 +197,21 @@ a:hover {
   color: var(--retro-red);
 }
 
+.site-title:hover {
+  background: var(--retro-ink);
+
+  color: var(--retro-white) !important;
+
+  border: 1px solid var(--retro-ink);
+
+  box-shadow: var(--retro-shadow-small);
+
+  text-decoration: none !important;
+}
+
+.site-title:hover::before {
+  color: var(--retro-yellow);
+}
 
 /* =========================================================
    06. NAVIGATION
@@ -337,11 +364,26 @@ a:hover {
    11. SIDEBAR
    ========================================================= */
 
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
 .sidebar {
   background: transparent;
 }
 
+.author__avatar {
+  border-radius: 0 !important;
+}
+
 .author__avatar img {
+  width: 125px;
+  height: 155px;
+
+  object-fit: cover;
+
+  border-radius: 0 !important;
+
   border: var(--retro-border);
 
   box-shadow: var(--retro-shadow-small);
