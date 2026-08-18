@@ -1,27 +1,29 @@
 /* =========================================================
    LOMASH RELIA
    RETRO RESEARCH / COMPUTER UI
+   LOW-YELLOW EDITION
    ========================================================= */
 
 :root {
-  /* ---------- Core palette ---------- */
+  /* ---------- Core ---------- */
 
   --retro-paper: #f4f0e6;
-  --retro-paper-dark: #e7e0d2;
+  --retro-paper-dark: #e8e1d5;
   --retro-white: #fffdf8;
 
   --retro-ink: #18212b;
   --retro-navy: #18324a;
   --retro-blue: #285a7c;
 
-  --retro-yellow: #e7c84b;
   --retro-red: #b7473d;
+
+  /* Yellow is now a minor accent only */
+  --retro-yellow: #d7b83f;
+
   --retro-green: #5d8064;
 
   --retro-gray: #73766f;
   --retro-line: #25313a;
-
-  /* ---------- Geometry ---------- */
 
   --retro-border: 2px solid var(--retro-ink);
 
@@ -58,7 +60,7 @@ body {
 }
 
 
-/* Keep the retro geometry only on UI elements */
+/* UI corners */
 
 .btn,
 input,
@@ -95,15 +97,11 @@ h6 {
 
 h1 {
   font-size: clamp(2.6rem, 5vw, 4.6rem);
-
   line-height: 1.02;
-
-  margin-bottom: 1.2rem;
 }
 
 h2 {
   font-size: clamp(2rem, 3vw, 3rem);
-
   line-height: 1.08;
 
   margin-top: 3rem;
@@ -112,7 +110,6 @@ h2 {
 
 h3 {
   font-size: 1.45rem;
-
   line-height: 1.2;
 }
 
@@ -135,7 +132,6 @@ a {
   font-weight: 600;
 
   text-decoration-thickness: 1.5px;
-
   text-underline-offset: 3px;
 }
 
@@ -199,8 +195,6 @@ a:hover {
 }
 
 .greedy-nav .visible-links a {
-  position: relative;
-
   color: var(--retro-ink) !important;
 
   font-family:
@@ -222,9 +216,9 @@ a:hover {
 }
 
 .greedy-nav .visible-links a:hover {
-  background: var(--retro-yellow);
+  background: var(--retro-paper-dark);
 
-  color: var(--retro-ink) !important;
+  color: var(--retro-navy) !important;
 
   border: 1px solid var(--retro-ink);
 
@@ -233,24 +227,15 @@ a:hover {
   transform: translate(-1px, -1px);
 }
 
-
-/* Search */
-
-.search__toggle {
-  color: var(--retro-ink) !important;
-}
-
 .greedy-nav button {
   color: var(--retro-white) !important;
 
   background: var(--retro-navy) !important;
-
-  border-radius: 0 !important;
 }
 
 
 /* =========================================================
-   07. PAGE BACKGROUND
+   07. PAGE
    ========================================================= */
 
 .initial-content,
@@ -265,12 +250,12 @@ a:hover {
 
 
 /* =========================================================
-   08. PAGE TITLES
+   08. PAGE TITLE
    ========================================================= */
 
 /*
-   No giant yellow rectangles.
-   Instead use a compact "terminal label".
+   Navy terminal-style title.
+   No yellow background.
 */
 
 .page__title {
@@ -344,7 +329,7 @@ a:hover {
 }
 
 .page__content > p:first-of-type strong {
-  color: var(--retro-red);
+  color: var(--retro-navy);
 }
 
 
@@ -356,17 +341,11 @@ a:hover {
   background: transparent;
 }
 
-
-/* Avatar */
-
 .author__avatar img {
   border: var(--retro-border);
 
   box-shadow: var(--retro-shadow-small);
 }
-
-
-/* Author name */
 
 .author__name {
   color: var(--retro-navy) !important;
@@ -385,9 +364,6 @@ a:hover {
     monospace;
 }
 
-
-/* Bio */
-
 .author__bio {
   color: var(--retro-ink) !important;
 
@@ -395,9 +371,6 @@ a:hover {
 
   line-height: 1.6;
 }
-
-
-/* Sidebar links */
 
 .author__urls a {
   color: var(--retro-navy) !important;
@@ -416,11 +389,8 @@ a:hover {
   color: var(--retro-red) !important;
 }
 
-
-/* Mobile author button */
-
 .author__urls-wrapper button {
-  background: var(--retro-yellow) !important;
+  background: var(--retro-paper-dark) !important;
 
   color: var(--retro-ink) !important;
 
@@ -438,21 +408,15 @@ a:hover {
 
 
 /* =========================================================
-   12. RETRO UI LABELS
+   12. SMALL RETRO LABELS
    ========================================================= */
-
-/*
-   Use these anywhere with:
-
-   <span class="retro-label">STATUS: ACTIVE</span>
-*/
 
 .retro-label {
   display: inline-block;
 
-  background: var(--retro-yellow);
+  background: var(--retro-paper-dark);
 
-  color: var(--retro-ink);
+  color: var(--retro-navy);
 
   border: 1px solid var(--retro-ink);
 
@@ -471,6 +435,13 @@ a:hover {
 }
 
 
+/* Tiny yellow highlight only */
+
+.retro-label--active {
+  background: var(--retro-yellow);
+}
+
+
 /* =========================================================
    13. BUTTONS
    ========================================================= */
@@ -478,9 +449,9 @@ a:hover {
 .btn {
   display: inline-block;
 
-  background: var(--retro-yellow) !important;
+  background: var(--retro-navy) !important;
 
-  color: var(--retro-ink) !important;
+  color: var(--retro-white) !important;
 
   border: var(--retro-border) !important;
 
@@ -514,8 +485,7 @@ a:hover {
 
   transform: translate(2px, 2px);
 
-  box-shadow:
-    1px 1px 0 var(--retro-ink);
+  box-shadow: 1px 1px 0 var(--retro-ink);
 }
 
 .btn:active {
@@ -525,13 +495,18 @@ a:hover {
 }
 
 
+/* Optional special button */
+
+.btn--warning {
+  background: var(--retro-yellow) !important;
+
+  color: var(--retro-ink) !important;
+}
+
+
 /* =========================================================
    14. PROJECT / ARCHIVE CARDS
    ========================================================= */
-
-/*
-   Keep cards subtle.
-*/
 
 .archive__item {
   background: var(--retro-white);
@@ -599,11 +574,6 @@ a:hover {
   box-shadow: var(--retro-shadow);
 }
 
-
-/* =========================================================
-   17. FIGURES
-   ========================================================= */
-
 figure img {
   border: 1px solid var(--retro-ink);
 
@@ -625,7 +595,7 @@ figcaption {
 
 
 /* =========================================================
-   18. BLOCKQUOTES
+   17. BLOCKQUOTES
    ========================================================= */
 
 blockquote {
@@ -648,7 +618,7 @@ blockquote {
 
 
 /* =========================================================
-   19. CODE
+   18. CODE
    ========================================================= */
 
 code {
@@ -671,7 +641,7 @@ code {
 pre {
   background: #172027 !important;
 
-  color: #f4f0e6 !important;
+  color: var(--retro-paper) !important;
 
   border: var(--retro-border);
 
@@ -682,13 +652,9 @@ pre {
   overflow-x: auto;
 }
 
-.highlight {
-  background: transparent !important;
-}
-
 
 /* =========================================================
-   20. TABLES
+   19. TABLES
    ========================================================= */
 
 table {
@@ -733,7 +699,7 @@ tr:nth-child(even) {
 
 
 /* =========================================================
-   21. LISTS
+   20. LISTS
    ========================================================= */
 
 .page__content li {
@@ -746,7 +712,7 @@ tr:nth-child(even) {
 
 
 /* =========================================================
-   22. HORIZONTAL RULES
+   21. HORIZONTAL RULES
    ========================================================= */
 
 hr {
@@ -759,7 +725,7 @@ hr {
 
 
 /* =========================================================
-   23. FORMS
+   22. FORMS
    ========================================================= */
 
 input,
@@ -791,7 +757,7 @@ select:focus {
 
 
 /* =========================================================
-   24. SEARCH
+   23. SEARCH
    ========================================================= */
 
 .search-content {
@@ -804,7 +770,7 @@ select:focus {
 
 
 /* =========================================================
-   25. BREADCRUMBS
+   24. BREADCRUMBS
    ========================================================= */
 
 .breadcrumbs {
@@ -822,13 +788,13 @@ select:focus {
 
 
 /* =========================================================
-   26. PAGINATION
+   25. PAGINATION
    ========================================================= */
 
 .pagination a {
-  background: var(--retro-yellow);
+  background: var(--retro-navy);
 
-  color: var(--retro-ink);
+  color: var(--retro-white);
 
   border: var(--retro-border);
 
@@ -850,7 +816,7 @@ select:focus {
 
 
 /* =========================================================
-   27. FOOTER
+   26. FOOTER
    ========================================================= */
 
 .page__footer {
@@ -862,7 +828,7 @@ select:focus {
 }
 
 .page__footer a {
-  color: var(--retro-yellow) !important;
+  color: var(--retro-paper) !important;
 
   font-family:
     "IBM Plex Mono",
@@ -872,6 +838,10 @@ select:focus {
   font-size: 0.8rem;
 }
 
+.page__footer a:hover {
+  color: var(--retro-yellow) !important;
+}
+
 .page__footer-follow,
 .page__footer-copyright {
   color: var(--retro-paper) !important;
@@ -879,7 +849,7 @@ select:focus {
 
 
 /* =========================================================
-   28. MOBILE
+   27. MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -912,7 +882,7 @@ select:focus {
 
 
 /* =========================================================
-   29. ACCESSIBILITY
+   28. ACCESSIBILITY
    ========================================================= */
 
 a:focus,
@@ -927,7 +897,7 @@ select:focus {
 
 
 /* =========================================================
-   30. REDUCED MOTION
+   29. REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
