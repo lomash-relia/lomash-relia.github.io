@@ -1,76 +1,78 @@
 /* =========================================================
-   LOMASH RELIA — SOFT NEO-BRUTALISM
+   LOMASH RELIA
+   RETRO RESEARCH / COMPUTER UI
    ========================================================= */
 
-/* ---------------------------------------------------------
-   1. COLOR SYSTEM
-   --------------------------------------------------------- */
-
 :root {
-  --neo-bg: #f7f6f2;
-  --neo-surface: #ffffff;
+  /* ---------- Core palette ---------- */
 
-  --neo-black: #181818;
-  --neo-text: #222222;
-  --neo-muted: #666666;
+  --retro-paper: #f4f0e6;
+  --retro-paper-dark: #e7e0d2;
+  --retro-white: #fffdf8;
 
-  --neo-yellow: #f4d35e;
-  --neo-blue: #9cc9e8;
-  --neo-green: #a8d5ba;
-  --neo-pink: #e9a8b8;
+  --retro-ink: #18212b;
+  --retro-navy: #18324a;
+  --retro-blue: #285a7c;
 
-  --neo-gray: #ecebe7;
+  --retro-yellow: #e7c84b;
+  --retro-red: #b7473d;
+  --retro-green: #5d8064;
 
-  --neo-border: 2px solid #181818;
+  --retro-gray: #73766f;
+  --retro-line: #25313a;
 
-  --neo-shadow: 5px 5px 0 #181818;
-  --neo-shadow-small: 3px 3px 0 #181818;
+  /* ---------- Geometry ---------- */
+
+  --retro-border: 2px solid var(--retro-ink);
+
+  --retro-shadow:
+    4px 4px 0 var(--retro-ink);
+
+  --retro-shadow-small:
+    3px 3px 0 var(--retro-ink);
 }
 
 
-/* ---------------------------------------------------------
-   2. GLOBAL
-   --------------------------------------------------------- */
+/* =========================================================
+   01. GLOBAL
+   ========================================================= */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--neo-bg);
-  color: var(--neo-text);
+  background: var(--retro-paper);
+  color: var(--retro-ink);
 
   font-family:
-    "Space Grotesk",
+    "IBM Plex Sans",
     "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
+    Arial,
     sans-serif;
 
-  font-weight: 400;
+  font-size: 16px;
   line-height: 1.7;
+
+  font-weight: 400;
 }
 
 
-/* Sharp Neo-Brutalist corners,
-   but don't force everything to look like a box. */
+/* Keep the retro geometry only on UI elements */
 
 .btn,
 input,
 textarea,
 select,
 table,
-.notice,
-.archive__item,
-.feature__item {
+.notice {
   border-radius: 0 !important;
 }
 
 
-/* ---------------------------------------------------------
-   3. TYPOGRAPHY
-   --------------------------------------------------------- */
+/* =========================================================
+   02. TYPOGRAPHY
+   ========================================================= */
 
 h1,
 h2,
@@ -78,7 +80,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--neo-black);
+  color: var(--retro-ink);
+
+  font-family:
+    "IBM Plex Sans",
+    "Inter",
+    Arial,
+    sans-serif;
 
   font-weight: 700;
 
@@ -86,21 +94,30 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+
+  line-height: 1.02;
+
+  margin-bottom: 1.2rem;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
-  line-height: 1.1;
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  line-height: 1.08;
+
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
+
+  line-height: 1.2;
 }
 
 p {
-  color: var(--neo-text);
+  color: var(--retro-ink);
 }
 
 strong {
@@ -108,208 +125,381 @@ strong {
 }
 
 
-/* ---------------------------------------------------------
-   4. LINKS
-   --------------------------------------------------------- */
+/* =========================================================
+   03. LINKS
+   ========================================================= */
 
 a {
-  color: var(--neo-black);
+  color: var(--retro-navy);
 
   font-weight: 600;
 
   text-decoration-thickness: 1.5px;
+
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--neo-black);
+  color: var(--retro-red);
 }
 
 
-/* ---------------------------------------------------------
-   5. MASTHEAD
-   --------------------------------------------------------- */
+/* =========================================================
+   04. MASTHEAD
+   ========================================================= */
 
 .masthead {
-  background: var(--neo-bg) !important;
+  background: var(--retro-paper) !important;
 
-  border-bottom: var(--neo-border);
+  border-bottom: var(--retro-border);
 
   box-shadow: none;
 }
 
 .masthead__inner-wrap {
-  padding-top: 0.65rem;
-  padding-bottom: 0.65rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 
-/* ---------------------------------------------------------
-   6. SITE TITLE
-   --------------------------------------------------------- */
+/* =========================================================
+   05. SITE TITLE
+   ========================================================= */
 
 .site-title {
-  color: var(--neo-black) !important;
+  color: var(--retro-navy) !important;
 
-  font-weight: 800;
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
 
-  font-size: 1.35rem;
+  font-weight: 700;
+
+  font-size: 1.25rem;
+
+  letter-spacing: -0.03em;
 
   text-decoration: none !important;
 }
 
+.site-title::before {
+  content: "> ";
 
-/* ---------------------------------------------------------
-   7. NAVIGATION
-   --------------------------------------------------------- */
+  color: var(--retro-red);
+}
+
+
+/* =========================================================
+   06. NAVIGATION
+   ========================================================= */
 
 .greedy-nav {
   background: transparent !important;
 }
 
-.greedy-nav a {
-  color: var(--neo-black) !important;
+.greedy-nav .visible-links a {
+  position: relative;
 
-  font-weight: 700;
+  color: var(--retro-ink) !important;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
 
   text-decoration: none !important;
 
-  padding: 0.5rem 0.7rem;
+  padding: 0.45rem 0.7rem;
 
-  border: 2px solid transparent;
+  margin-left: 0.15rem;
 
-  transition:
-    background 0.1s ease,
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
+  border: 1px solid transparent;
 }
 
-.greedy-nav a:hover {
-  background: var(--neo-yellow);
+.greedy-nav .visible-links a:hover {
+  background: var(--retro-yellow);
 
-  border: 2px solid var(--neo-black);
+  color: var(--retro-ink) !important;
 
-  box-shadow: var(--neo-shadow-small);
+  border: 1px solid var(--retro-ink);
+
+  box-shadow: var(--retro-shadow-small);
 
   transform: translate(-1px, -1px);
 }
 
 
-/* Search button */
+/* Search */
 
-.greedy-nav button,
 .search__toggle {
-  color: var(--neo-black) !important;
+  color: var(--retro-ink) !important;
+}
+
+.greedy-nav button {
+  color: var(--retro-white) !important;
+
+  background: var(--retro-navy) !important;
+
+  border-radius: 0 !important;
 }
 
 
-/* ---------------------------------------------------------
-   8. PAGE
-   --------------------------------------------------------- */
+/* =========================================================
+   07. PAGE BACKGROUND
+   ========================================================= */
 
 .initial-content,
-.page {
-  background: var(--neo-bg);
+.page,
+.page__hero {
+  background: var(--retro-paper);
 }
 
 .page__content {
-  color: var(--neo-text);
+  color: var(--retro-ink);
 }
 
 
-/* ---------------------------------------------------------
-   9. REMOVE THE GIANT HOMEPAGE TITLE BOXES
-   --------------------------------------------------------- */
+/* =========================================================
+   08. PAGE TITLES
+   ========================================================= */
 
 /*
-   IMPORTANT:
-
-   The previous design put yellow boxes around the
-   homepage headings.
-
-   We deliberately remove that effect.
+   No giant yellow rectangles.
+   Instead use a compact "terminal label".
 */
-
-.page__content > h1,
-.page__content > h2,
-.page__content > h3 {
-  display: block;
-
-  background: transparent;
-
-  border: 0;
-
-  box-shadow: none;
-
-  padding: 0;
-
-  margin-top: 1.5rem;
-}
-
-
-/* ---------------------------------------------------------
-   10. PAGE TITLE
-   --------------------------------------------------------- */
 
 .page__title {
   display: inline-block;
 
-  background: var(--neo-yellow);
+  color: var(--retro-white);
 
-  color: var(--neo-black);
+  background: var(--retro-navy);
 
-  border: var(--neo-border);
+  border: var(--retro-border);
 
-  padding: 0.25rem 0.55rem;
-
-  box-shadow: var(--neo-shadow-small);
+  padding: 0.35rem 0.65rem;
 
   margin-bottom: 1.5rem;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  box-shadow: var(--retro-shadow-small);
 }
 
 
-/* ---------------------------------------------------------
-   11. HERO / INTRO
-   --------------------------------------------------------- */
+/* =========================================================
+   09. CONTENT HEADINGS
+   ========================================================= */
 
-.page__hero {
+.page__content h2 {
+  position: relative;
+
+  padding-top: 1rem;
+
+  border-top: 2px solid var(--retro-line);
+}
+
+.page__content h2::before {
+  content: "//";
+
+  display: inline-block;
+
+  margin-right: 0.5rem;
+
+  color: var(--retro-red);
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-weight: 600;
+}
+
+.page__content h3 {
+  color: var(--retro-navy);
+}
+
+
+/* =========================================================
+   10. HERO INTRO
+   ========================================================= */
+
+.page__content > p:first-of-type {
+  font-size: 1.12rem;
+}
+
+.page__content > p:first-of-type strong {
+  color: var(--retro-red);
+}
+
+
+/* =========================================================
+   11. SIDEBAR
+   ========================================================= */
+
+.sidebar {
   background: transparent;
 }
 
 
-/* Highlight important text without giant blocks */
+/* Avatar */
 
-.page__content mark {
-  background: var(--neo-yellow);
+.author__avatar img {
+  border: var(--retro-border);
 
-  color: var(--neo-black);
-
-  padding: 0.05rem 0.25rem;
+  box-shadow: var(--retro-shadow-small);
 }
 
 
-/* ---------------------------------------------------------
-   12. BUTTONS
-   --------------------------------------------------------- */
+/* Author name */
+
+.author__name {
+  color: var(--retro-navy) !important;
+
+  font-weight: 700;
+}
+
+.author__name::before {
+  content: "./ ";
+
+  color: var(--retro-red);
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+}
+
+
+/* Bio */
+
+.author__bio {
+  color: var(--retro-ink) !important;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+
+/* Sidebar links */
+
+.author__urls a {
+  color: var(--retro-navy) !important;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.author__urls a:hover {
+  color: var(--retro-red) !important;
+}
+
+
+/* Mobile author button */
+
+.author__urls-wrapper button {
+  background: var(--retro-yellow) !important;
+
+  color: var(--retro-ink) !important;
+
+  border: var(--retro-border);
+
+  box-shadow: var(--retro-shadow-small);
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   12. RETRO UI LABELS
+   ========================================================= */
+
+/*
+   Use these anywhere with:
+
+   <span class="retro-label">STATUS: ACTIVE</span>
+*/
+
+.retro-label {
+  display: inline-block;
+
+  background: var(--retro-yellow);
+
+  color: var(--retro-ink);
+
+  border: 1px solid var(--retro-ink);
+
+  padding: 0.15rem 0.45rem;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   13. BUTTONS
+   ========================================================= */
 
 .btn {
   display: inline-block;
 
-  background: var(--neo-yellow) !important;
+  background: var(--retro-yellow) !important;
 
-  color: var(--neo-black) !important;
+  color: var(--retro-ink) !important;
 
-  border: var(--neo-border) !important;
+  border: var(--retro-border) !important;
 
-  box-shadow: var(--neo-shadow-small);
+  box-shadow: var(--retro-shadow-small);
+
+  padding: 0.5rem 0.8rem;
+
+  margin: 0.25rem 0.4rem 0.5rem 0;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.82rem;
 
   font-weight: 700;
 
   text-decoration: none !important;
-
-  padding: 0.55rem 0.9rem;
-
-  margin: 0.3rem 0.4rem 0.6rem 0;
 
   transition:
     transform 0.08s ease,
@@ -318,13 +508,14 @@ a:hover {
 }
 
 .btn:hover {
-  background: var(--neo-blue) !important;
+  background: var(--retro-red) !important;
 
-  color: var(--neo-black) !important;
+  color: var(--retro-white) !important;
 
   transform: translate(2px, 2px);
 
-  box-shadow: 1px 1px 0 var(--neo-black);
+  box-shadow:
+    1px 1px 0 var(--retro-ink);
 }
 
 .btn:active {
@@ -334,321 +525,260 @@ a:hover {
 }
 
 
-/* Button variations */
+/* =========================================================
+   14. PROJECT / ARCHIVE CARDS
+   ========================================================= */
 
-.btn--primary {
-  background: var(--neo-blue) !important;
+/*
+   Keep cards subtle.
+*/
+
+.archive__item {
+  background: var(--retro-white);
+
+  border: 1px solid var(--retro-ink);
+
+  box-shadow: var(--retro-shadow-small);
+
+  padding: 1.15rem 1.25rem;
+
+  margin-bottom: 1.5rem;
 }
 
-.btn--success {
-  background: var(--neo-green) !important;
+.archive__item:hover {
+  transform: translate(-1px, -1px);
+
+  box-shadow: var(--retro-shadow);
 }
 
-.btn--warning {
-  background: var(--neo-yellow) !important;
-}
+.archive__item-title {
+  color: var(--retro-navy);
 
-.btn--danger {
-  background: var(--neo-pink) !important;
-}
-
-
-/* ---------------------------------------------------------
-   13. SIDEBAR
-   --------------------------------------------------------- */
-
-.sidebar {
-  background: transparent;
-}
-
-.author__avatar img {
-  border: var(--neo-border);
-
-  box-shadow: var(--neo-shadow-small);
-}
-
-.author__name {
-  color: var(--neo-black) !important;
-
-  font-weight: 800;
-}
-
-.author__bio {
-  color: var(--neo-text) !important;
-
-  font-weight: 500;
-}
-
-.author__urls-wrapper button {
-  background: var(--neo-yellow) !important;
-
-  color: var(--neo-black) !important;
-
-  border: var(--neo-border);
-
-  box-shadow: var(--neo-shadow-small);
-
-  font-weight: 700;
-}
-
-.author__urls a {
-  color: var(--neo-black) !important;
-
-  font-weight: 600;
-}
-
-
-/* ---------------------------------------------------------
-   14. SOCIAL LINKS
-   --------------------------------------------------------- */
-
-.social-icons a {
-  color: var(--neo-black) !important;
+  font-size: 1.35rem;
 
   font-weight: 700;
 }
 
 
-/* ---------------------------------------------------------
-   15. IMAGES
-   --------------------------------------------------------- */
+/* =========================================================
+   15. FEATURE ITEMS
+   ========================================================= */
+
+.feature__item {
+  background: var(--retro-white);
+
+  border: 1px solid var(--retro-ink);
+
+  box-shadow: var(--retro-shadow-small);
+
+  padding: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.feature__item:hover {
+  transform: translate(-1px, -1px);
+
+  box-shadow: var(--retro-shadow);
+}
+
+
+/* =========================================================
+   16. IMAGES
+   ========================================================= */
 
 .page__content img {
-  border: var(--neo-border);
+  border: 1px solid var(--retro-ink);
 
-  box-shadow: var(--neo-shadow-small);
-
-  transition:
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
+  box-shadow: var(--retro-shadow-small);
 }
 
 .page__content img:hover {
-  transform: translate(-2px, -2px);
+  transform: translate(-1px, -1px);
 
-  box-shadow: var(--neo-shadow);
+  box-shadow: var(--retro-shadow);
 }
 
 
-/* ---------------------------------------------------------
-   16. FIGURES
-   --------------------------------------------------------- */
+/* =========================================================
+   17. FIGURES
+   ========================================================= */
 
 figure img {
-  border: var(--neo-border);
+  border: 1px solid var(--retro-ink);
 
-  box-shadow: var(--neo-shadow-small);
+  box-shadow: var(--retro-shadow-small);
 }
 
 figcaption {
-  color: var(--neo-muted) !important;
+  color: var(--retro-gray) !important;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.75rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   18. BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+  background: var(--retro-paper-dark);
+
+  color: var(--retro-ink);
+
+  border-top: 2px solid var(--retro-ink);
+
+  border-right: 0;
+
+  border-bottom: 2px solid var(--retro-ink);
+
+  border-left: 6px solid var(--retro-red);
+
+  padding: 0.9rem 1.2rem;
 
   font-weight: 500;
 }
 
 
-/* ---------------------------------------------------------
-   17. BLOCKQUOTES
-   --------------------------------------------------------- */
-
-blockquote {
-  background: var(--neo-yellow);
-
-  color: var(--neo-black);
-
-  border: var(--neo-border);
-
-  border-left: 6px solid var(--neo-black);
-
-  box-shadow: var(--neo-shadow-small);
-
-  padding: 0.9rem 1.2rem;
-
-  font-weight: 600;
-}
-
-
-/* ---------------------------------------------------------
-   18. CODE
-   --------------------------------------------------------- */
+/* =========================================================
+   19. CODE
+   ========================================================= */
 
 code {
-  background: #e8e7e2;
+  background: #ded9ce;
 
-  color: var(--neo-black);
+  color: var(--retro-navy);
 
-  border: 1px solid #c8c7c2;
+  border: 1px solid #aaa69c;
 
-  padding: 0.12rem 0.3rem;
+  padding: 0.1rem 0.3rem;
 
-  font-weight: 600;
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.86em;
 }
 
 pre {
-  background: #202020 !important;
+  background: #172027 !important;
 
-  color: #f5f5f5 !important;
+  color: #f4f0e6 !important;
 
-  border: var(--neo-border);
+  border: var(--retro-border);
 
-  box-shadow: var(--neo-shadow-small);
+  box-shadow: var(--retro-shadow-small);
 
   padding: 1rem;
 
   overflow-x: auto;
 }
 
+.highlight {
+  background: transparent !important;
+}
 
-/* ---------------------------------------------------------
-   19. TABLES
-   --------------------------------------------------------- */
+
+/* =========================================================
+   20. TABLES
+   ========================================================= */
 
 table {
   width: 100%;
 
   border-collapse: collapse;
 
-  border: var(--neo-border);
+  background: var(--retro-white);
 
-  box-shadow: var(--neo-shadow-small);
+  border: var(--retro-border);
 
-  margin: 2rem 0;
-
-  background: var(--neo-surface);
+  box-shadow: var(--retro-shadow-small);
 }
 
 th {
-  background: var(--neo-yellow);
+  background: var(--retro-navy);
 
-  color: var(--neo-black);
+  color: var(--retro-white);
 
-  font-weight: 700;
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
 }
 
 td,
 th {
-  border: 1px solid var(--neo-black);
+  border: 1px solid var(--retro-ink);
 
-  padding: 0.7rem;
+  padding: 0.65rem 0.75rem;
 }
 
 tr:nth-child(even) {
-  background: var(--neo-gray);
+  background: var(--retro-paper-dark);
 }
 
 
-/* ---------------------------------------------------------
-   20. HORIZONTAL RULE
-   --------------------------------------------------------- */
+/* =========================================================
+   21. LISTS
+   ========================================================= */
+
+.page__content li {
+  margin-bottom: 0.4rem;
+}
+
+.page__content li::marker {
+  color: var(--retro-red);
+}
+
+
+/* =========================================================
+   22. HORIZONTAL RULES
+   ========================================================= */
 
 hr {
   border: 0;
 
-  border-top: 2px solid #c8c7c2;
+  border-top: 1px solid var(--retro-line);
 
   margin: 2.5rem 0;
 }
 
 
-/* ---------------------------------------------------------
-   21. ARCHIVE / PROJECT CARDS
-   --------------------------------------------------------- */
-
-.archive__item {
-  background: var(--neo-surface);
-
-  border: var(--neo-border);
-
-  box-shadow: var(--neo-shadow-small);
-
-  padding: 1.2rem;
-
-  margin-bottom: 1.8rem;
-}
-
-.archive__item:hover {
-  transform: translate(-1px, -1px);
-
-  box-shadow: var(--neo-shadow);
-}
-
-.archive__item-title {
-  font-weight: 750;
-}
-
-
-/* ---------------------------------------------------------
-   22. FEATURE CARDS
-   --------------------------------------------------------- */
-
-.feature__item {
-  background: var(--neo-surface);
-
-  border: var(--neo-border);
-
-  box-shadow: var(--neo-shadow-small);
-
-  padding: 1.2rem;
-
-  margin-bottom: 1.8rem;
-}
-
-.feature__item:hover {
-  transform: translate(-1px, -1px);
-
-  box-shadow: var(--neo-shadow);
-}
-
-
-/* ---------------------------------------------------------
-   23. NOTICE BOXES
-   --------------------------------------------------------- */
-
-.notice {
-  border: var(--neo-border);
-
-  box-shadow: var(--neo-shadow-small);
-
-  padding: 0.9rem 1.1rem;
-
-  font-weight: 600;
-}
-
-.notice--primary {
-  background: var(--neo-blue);
-}
-
-.notice--success {
-  background: var(--neo-green);
-}
-
-.notice--warning {
-  background: var(--neo-yellow);
-}
-
-.notice--danger {
-  background: var(--neo-pink);
-}
-
-
-/* ---------------------------------------------------------
-   24. FORMS
-   --------------------------------------------------------- */
+/* =========================================================
+   23. FORMS
+   ========================================================= */
 
 input,
 textarea,
 select {
-  background: var(--neo-surface) !important;
+  background: var(--retro-white) !important;
 
-  color: var(--neo-black) !important;
+  color: var(--retro-ink) !important;
 
-  border: var(--neo-border) !important;
+  border: var(--retro-border) !important;
 
-  box-shadow: var(--neo-shadow-small);
+  box-shadow: var(--retro-shadow-small);
 
-  padding: 0.65rem;
+  padding: 0.6rem;
 
-  font-family: inherit;
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
 }
 
 input:focus,
@@ -656,102 +786,110 @@ textarea:focus,
 select:focus {
   outline: none;
 
-  box-shadow: var(--neo-shadow);
+  box-shadow: var(--retro-shadow);
 }
 
 
-/* ---------------------------------------------------------
-   25. SEARCH
-   --------------------------------------------------------- */
+/* =========================================================
+   24. SEARCH
+   ========================================================= */
 
 .search-content {
-  background: var(--neo-bg);
+  background: var(--retro-paper);
 
-  border: var(--neo-border);
+  border: var(--retro-border);
 
-  box-shadow: var(--neo-shadow);
+  box-shadow: var(--retro-shadow);
 }
 
 
-/* ---------------------------------------------------------
-   26. BREADCRUMBS
-   --------------------------------------------------------- */
+/* =========================================================
+   25. BREADCRUMBS
+   ========================================================= */
+
+.breadcrumbs {
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.75rem;
+}
 
 .breadcrumbs a {
   font-weight: 600;
 }
 
 
-/* ---------------------------------------------------------
-   27. PAGINATION
-   --------------------------------------------------------- */
+/* =========================================================
+   26. PAGINATION
+   ========================================================= */
 
 .pagination a {
-  background: var(--neo-yellow);
+  background: var(--retro-yellow);
 
-  color: var(--neo-black);
+  color: var(--retro-ink);
 
-  border: var(--neo-border);
+  border: var(--retro-border);
 
-  box-shadow: var(--neo-shadow-small);
+  box-shadow: var(--retro-shadow-small);
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
 
   font-weight: 700;
 }
 
 .pagination a:hover {
-  background: var(--neo-blue);
+  background: var(--retro-red);
 
-  color: var(--neo-black);
-}
-
-.pagination .current {
-  background: var(--neo-black);
-
-  color: var(--neo-white);
+  color: var(--retro-white);
 }
 
 
-/* ---------------------------------------------------------
-   28. FOOTER
-   --------------------------------------------------------- */
+/* =========================================================
+   27. FOOTER
+   ========================================================= */
 
 .page__footer {
-  background: var(--neo-black) !important;
+  background: var(--retro-navy) !important;
 
-  color: #eeeeee !important;
+  color: var(--retro-paper) !important;
 
-  border-top: var(--neo-border);
+  border-top: var(--retro-border);
 }
 
 .page__footer a {
-  color: var(--neo-yellow) !important;
+  color: var(--retro-yellow) !important;
 
-  font-weight: 600;
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.8rem;
 }
 
 .page__footer-follow,
 .page__footer-copyright {
-  color: #eeeeee !important;
+  color: var(--retro-paper) !important;
 }
 
 
-/* ---------------------------------------------------------
-   29. LISTS
-   --------------------------------------------------------- */
-
-.page__content li {
-  margin-bottom: 0.35rem;
-}
-
-
-/* ---------------------------------------------------------
-   30. MOBILE
-   --------------------------------------------------------- */
+/* =========================================================
+   28. MOBILE
+   ========================================================= */
 
 @media (max-width: 768px) {
 
+  body {
+    font-size: 15px;
+  }
+
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -759,40 +897,38 @@ select:focus {
   }
 
   .page__title {
-    box-shadow: var(--neo-shadow-small);
+    font-size: 1.5rem;
+
+    box-shadow: var(--retro-shadow-small);
   }
 
   .archive__item,
   .feature__item {
     padding: 1rem;
 
-    box-shadow: var(--neo-shadow-small);
-  }
-
-  .btn {
-    box-shadow: var(--neo-shadow-small);
+    box-shadow: var(--retro-shadow-small);
   }
 }
 
 
-/* ---------------------------------------------------------
-   31. ACCESSIBILITY
-   --------------------------------------------------------- */
+/* =========================================================
+   29. ACCESSIBILITY
+   ========================================================= */
 
 a:focus,
 button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 3px solid var(--neo-blue);
+  outline: 2px solid var(--retro-red);
 
   outline-offset: 3px;
 }
 
 
-/* ---------------------------------------------------------
-   32. REDUCED MOTION
-   --------------------------------------------------------- */
+/* =========================================================
+   30. REDUCED MOTION
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
