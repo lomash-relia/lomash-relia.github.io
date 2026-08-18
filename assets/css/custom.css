@@ -1,0 +1,768 @@
+/* =========================================================
+   LOMASH RELIA — NEO-BRUTALISM THEME
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. DESIGN SYSTEM
+   --------------------------------------------------------- */
+
+:root {
+  --neo-black: #111111;
+  --neo-white: #ffffff;
+
+  --neo-yellow: #ffe600;
+  --neo-blue: #4da3ff;
+  --neo-pink: #ff6b9d;
+  --neo-green: #73e66b;
+  --neo-orange: #ff914d;
+
+  --neo-gray: #f2f2f2;
+
+  --neo-border: 3px solid #111111;
+  --neo-shadow: 7px 7px 0 #111111;
+  --neo-shadow-small: 4px 4px 0 #111111;
+
+  --neo-radius: 0px;
+}
+
+
+/* ---------------------------------------------------------
+   2. GLOBAL
+   --------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--neo-white);
+  color: var(--neo-black);
+
+  font-family:
+    "Space Grotesk",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+/* Brutalism = sharp corners */
+
+* {
+  border-radius: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. TYPOGRAPHY
+   --------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--neo-black);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.98;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  color: var(--neo-black);
+}
+
+strong {
+  font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   4. LINKS
+   --------------------------------------------------------- */
+
+a {
+  color: var(--neo-black);
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--neo-black);
+}
+
+
+/* ---------------------------------------------------------
+   5. MASTHEAD
+   --------------------------------------------------------- */
+
+.masthead {
+  background: var(--neo-yellow) !important;
+
+  border-bottom: var(--neo-border);
+
+  box-shadow:
+    0 5px 0 var(--neo-black);
+}
+
+.masthead__inner-wrap {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+
+/* ---------------------------------------------------------
+   6. SITE TITLE
+   --------------------------------------------------------- */
+
+.site-title {
+  color: var(--neo-black) !important;
+
+  font-weight: 900;
+  font-size: 1.5rem;
+
+  text-decoration: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. NAVIGATION
+   --------------------------------------------------------- */
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.greedy-nav a {
+  color: var(--neo-black) !important;
+
+  font-weight: 800;
+
+  text-decoration: none !important;
+
+  padding: 0.6rem 0.8rem;
+
+  border: 2px solid transparent;
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    background 0.08s ease;
+}
+
+.greedy-nav a:hover {
+  background: var(--neo-white);
+
+  border: 2px solid var(--neo-black);
+
+  box-shadow: var(--neo-shadow-small);
+
+  transform: translate(-2px, -2px);
+}
+
+
+/* ---------------------------------------------------------
+   8. MOBILE MENU
+   --------------------------------------------------------- */
+
+.greedy-nav button {
+  background: var(--neo-black) !important;
+  color: var(--neo-white) !important;
+
+  border: 2px solid var(--neo-black);
+}
+
+
+/* ---------------------------------------------------------
+   9. PAGE CONTENT
+   --------------------------------------------------------- */
+
+.initial-content {
+  background: var(--neo-white);
+}
+
+.page {
+  background: var(--neo-white);
+}
+
+.page__content {
+  color: var(--neo-black);
+}
+
+
+/* ---------------------------------------------------------
+   10. PAGE TITLE
+   --------------------------------------------------------- */
+
+.page__title {
+  display: inline-block;
+
+  background: var(--neo-yellow);
+
+  border: var(--neo-border);
+
+  padding: 0.5rem 0.8rem;
+
+  box-shadow: var(--neo-shadow);
+
+  margin-bottom: 2rem;
+}
+
+
+/* ---------------------------------------------------------
+   11. HOME HERO
+   --------------------------------------------------------- */
+
+.page__content > h2:first-child {
+  display: inline-block;
+
+  background: var(--neo-yellow);
+
+  border: var(--neo-border);
+
+  padding: 0.4rem 0.7rem;
+
+  box-shadow: var(--neo-shadow);
+}
+
+
+/* ---------------------------------------------------------
+   12. BUTTONS
+   --------------------------------------------------------- */
+
+.btn {
+  display: inline-block;
+
+  background: var(--neo-yellow) !important;
+
+  color: var(--neo-black) !important;
+
+  border: var(--neo-border) !important;
+
+  box-shadow: var(--neo-shadow);
+
+  font-weight: 900;
+
+  text-decoration: none !important;
+
+  padding: 0.75rem 1.2rem;
+
+  margin: 0.4rem 0.5rem 0.8rem 0;
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+}
+
+.btn:hover {
+  background: var(--neo-blue) !important;
+
+  color: var(--neo-black) !important;
+
+  transform: translate(4px, 4px);
+
+  box-shadow: 3px 3px 0 var(--neo-black);
+}
+
+.btn:active {
+  transform: translate(7px, 7px);
+
+  box-shadow: none;
+}
+
+
+/* Button variations */
+
+.btn--primary {
+  background: var(--neo-blue) !important;
+}
+
+.btn--success {
+  background: var(--neo-green) !important;
+}
+
+.btn--warning {
+  background: var(--neo-yellow) !important;
+}
+
+.btn--danger {
+  background: var(--neo-pink) !important;
+}
+
+
+/* ---------------------------------------------------------
+   13. SIDEBAR / AUTHOR
+   --------------------------------------------------------- */
+
+.sidebar {
+  background: transparent;
+}
+
+.author__avatar img {
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow-small);
+}
+
+.author__name {
+  color: var(--neo-black) !important;
+
+  font-weight: 900;
+}
+
+.author__bio {
+  color: var(--neo-black) !important;
+
+  font-weight: 600;
+}
+
+.author__urls-wrapper button {
+  background: var(--neo-yellow) !important;
+
+  color: var(--neo-black) !important;
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow-small);
+
+  font-weight: 900;
+}
+
+.author__urls a {
+  color: var(--neo-black) !important;
+
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   14. IMAGES
+   --------------------------------------------------------- */
+
+.page__content img {
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow-small);
+
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.page__content img:hover {
+  transform: translate(-3px, -3px);
+
+  box-shadow: var(--neo-shadow);
+}
+
+
+/* ---------------------------------------------------------
+   15. FIGURES
+   --------------------------------------------------------- */
+
+figure img {
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+}
+
+figcaption {
+  color: var(--neo-black) !important;
+
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   16. BLOCKQUOTES
+   --------------------------------------------------------- */
+
+blockquote {
+  background: var(--neo-yellow);
+
+  color: var(--neo-black);
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow-small);
+
+  padding: 1rem 1.5rem;
+
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   17. CODE
+   --------------------------------------------------------- */
+
+code {
+  background: var(--neo-black);
+
+  color: var(--neo-yellow);
+
+  border: 2px solid var(--neo-black);
+
+  padding: 0.15rem 0.35rem;
+
+  font-weight: 700;
+}
+
+pre {
+  background: var(--neo-black) !important;
+
+  color: var(--neo-white) !important;
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+
+  padding: 1.2rem;
+
+  overflow-x: auto;
+}
+
+
+/* ---------------------------------------------------------
+   18. TABLES
+   --------------------------------------------------------- */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+
+  margin: 2rem 0;
+}
+
+th {
+  background: var(--neo-yellow);
+
+  color: var(--neo-black);
+
+  font-weight: 900;
+}
+
+td,
+th {
+  border: 2px solid var(--neo-black);
+
+  padding: 0.8rem;
+}
+
+tr:nth-child(even) {
+  background: var(--neo-gray);
+}
+
+
+/* ---------------------------------------------------------
+   19. HORIZONTAL RULE
+   --------------------------------------------------------- */
+
+hr {
+  border: 0;
+
+  border-top: var(--neo-border);
+
+  margin: 3rem 0;
+}
+
+
+/* ---------------------------------------------------------
+   20. LISTS
+   --------------------------------------------------------- */
+
+.page__content li {
+  margin-bottom: 0.5rem;
+}
+
+.page__content li::marker {
+  font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   21. FORMS
+   --------------------------------------------------------- */
+
+input,
+textarea,
+select {
+  background: var(--neo-white) !important;
+
+  color: var(--neo-black) !important;
+
+  border: var(--neo-border) !important;
+
+  box-shadow: var(--neo-shadow-small);
+
+  padding: 0.7rem;
+
+  font-family: inherit;
+
+  font-weight: 600;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+
+  box-shadow: var(--neo-shadow);
+}
+
+
+/* ---------------------------------------------------------
+   22. SEARCH
+   --------------------------------------------------------- */
+
+.search__toggle {
+  color: var(--neo-black) !important;
+}
+
+.search-content {
+  background: var(--neo-white);
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+}
+
+
+/* ---------------------------------------------------------
+   23. NOTICE BOXES
+   --------------------------------------------------------- */
+
+.notice {
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow-small);
+
+  padding: 1rem 1.2rem;
+
+  font-weight: 700;
+}
+
+.notice--primary {
+  background: var(--neo-blue);
+}
+
+.notice--success {
+  background: var(--neo-green);
+}
+
+.notice--warning {
+  background: var(--neo-yellow);
+}
+
+.notice--danger {
+  background: var(--neo-pink);
+}
+
+
+/* ---------------------------------------------------------
+   24. PAGINATION
+   --------------------------------------------------------- */
+
+.pagination a {
+  background: var(--neo-yellow);
+
+  color: var(--neo-black);
+
+  border: 2px solid var(--neo-black);
+
+  box-shadow: var(--neo-shadow-small);
+
+  font-weight: 900;
+}
+
+.pagination a:hover {
+  background: var(--neo-blue);
+
+  color: var(--neo-black);
+}
+
+.pagination .current {
+  background: var(--neo-black);
+
+  color: var(--neo-white);
+}
+
+
+/* ---------------------------------------------------------
+   25. FOOTER
+   --------------------------------------------------------- */
+
+.page__footer {
+  background: var(--neo-black) !important;
+
+  color: var(--neo-white) !important;
+
+  border-top: var(--neo-border);
+}
+
+.page__footer a {
+  color: var(--neo-yellow) !important;
+
+  font-weight: 800;
+}
+
+.page__footer-follow,
+.page__footer-copyright {
+  color: var(--neo-white) !important;
+}
+
+
+/* ---------------------------------------------------------
+   26. SOCIAL ICONS
+   --------------------------------------------------------- */
+
+.social-icons a {
+  color: var(--neo-black) !important;
+
+  font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   27. BREADCRUMBS
+   --------------------------------------------------------- */
+
+.breadcrumbs a {
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   28. PROJECT / ARCHIVE CARDS
+   --------------------------------------------------------- */
+
+.archive__item {
+  background: var(--neo-white);
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+
+  padding: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.archive__item-title {
+  font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   29. FEATURE CARDS
+   --------------------------------------------------------- */
+
+.feature__item {
+  background: var(--neo-white);
+
+  border: var(--neo-border);
+
+  box-shadow: var(--neo-shadow);
+
+  padding: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.feature__item:hover {
+  transform: translate(-2px, -2px);
+
+  box-shadow: 10px 10px 0 var(--neo-black);
+}
+
+
+/* ---------------------------------------------------------
+   30. RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .page__title {
+    box-shadow: var(--neo-shadow-small);
+  }
+
+  .archive__item,
+  .feature__item {
+    padding: 1rem;
+
+    box-shadow: var(--neo-shadow-small);
+  }
+
+  .btn {
+    box-shadow: var(--neo-shadow-small);
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   31. ACCESSIBILITY
+   --------------------------------------------------------- */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--neo-blue);
+
+  outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   32. REDUCED MOTION
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+
+    animation: none !important;
+  }
+
+}
